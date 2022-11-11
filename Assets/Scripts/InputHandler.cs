@@ -36,7 +36,7 @@ namespace LP.FDG.InputManager
                     {
                         case 8: // Units Layer
                             // do something
-                            SelectUnit(hit.transform);
+                            SelectUnit(hit.transform, Input.GetKey(KeyCode.LeftShift));
                             break;
                         default: // if none of the above happens 
                             // do something
@@ -49,9 +49,12 @@ namespace LP.FDG.InputManager
 
         }
 
-        private void SelectUnit(Transform unit)
+        private void SelectUnit(Transform unit, bool canMultiselect = false)
         {
-            DeselectUnits();
+            if(!canMultiselect)
+            {
+                DeselectUnits();
+            }
             selectedUnits.Add(unit);
             //Lets set an obj on the unit called Highlight
             unit.Find("Highlight").gameObject.SetActive(true);
