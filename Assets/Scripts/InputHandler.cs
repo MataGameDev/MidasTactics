@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using LP.FDG.Units.Player;
 
 namespace LP.FDG.InputManager
 {
@@ -82,6 +83,40 @@ namespace LP.FDG.InputManager
                 }
                 isDragging = false;
             }
+
+            if(Input.GetMouseButtonDown(1) && HaveSelectedUnits())
+            {
+                mousePos = Input.mousePosition;
+
+                //create a Ray
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                //check if we hit something
+                if(Physics.Raycast(ray,out hit))
+                {
+                    //if we do, then do something with that data
+                    LayerMask layerHit = hit.transform.gameObject.layer;
+
+                    switch(layerHit.value)
+                    {
+                        case 8: // Units Layer
+                            // do something
+                            break;
+                        case 9: // Enemy Units Layer
+
+                            break;
+                        default: // if none of the above happens 
+                            // do something
+                            foreach(Transform unit in selectedUnits)
+                            {
+                                PlayerUnit pU = unit.gameObject.GetComponent<PlayerUnit>();
+                                pU.MoveUnit(hit.point);
+                            }
+                            break;
+                    }
+                }
+            }
+
+
         }
 
         private void SelectUnit(Transform unit, bool canMultiselect = false)
@@ -117,6 +152,18 @@ namespace LP.FDG.InputManager
             
             return vpBounds.Contains(cam.WorldToViewportPoint(tf.position));
 
+        }
+
+        private bool HaveSelectedUnits()
+        {
+            if(selectedUnits.Count > 0)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
    }
