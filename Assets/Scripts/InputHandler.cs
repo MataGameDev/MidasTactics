@@ -11,6 +11,12 @@ namespace LP.FDG.InputManager
         private RaycastHit hit;//what we hit with the raycast
 
         private List<Transform> selectedUnits = new List<Transform>();
+
+        private bool isDragging = false;
+
+        private Vector3 mousePos; 
+
+
         
         void Start()
         {
@@ -19,11 +25,26 @@ namespace LP.FDG.InputManager
 
         }
 
+        private void OnGUI()
+        {
+            if(isDragging)
+            {
+
+                Rect rect = MultiSelect.GetScreenRect(mousePos,Input.mousePosition);
+                MultiSelect.DrawScreenRect(rect,new Color (0f,0f,0f,0.25f));
+                MultiSelect.DrawScreenRectBorder(rect,3,Color.blue);
+
+            }
+        }
+
 
         public void HandleUnitMovement()
         {
             if(Input.GetMouseButtonDown(0))
             {
+            
+                mousePos = Input.mousePosition;
+
                 //create a Ray
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
                 //check if we hit something
@@ -40,13 +61,27 @@ namespace LP.FDG.InputManager
                             break;
                         default: // if none of the above happens 
                             // do something
+                            isDragging = true;
                             DeselectUnits();
                             break;
                     }
                 }
                 
             }
-
+            if(Input.GetMouseButtonUp(0))
+            {
+                foreach (Transform child in Player.PlayerManager.instance.playerUnits)
+                {
+                    foreach(Transform unit in child)
+                    {
+                        if(isWithinSelectionBounds(unit))
+                        {
+                            SelectUnit(unit,true);
+                        }   
+                    }
+                }
+                isDragging = false;
+            }
         }
 
         private void SelectUnit(Transform unit, bool canMultiselect = false)
@@ -67,6 +102,21 @@ namespace LP.FDG.InputManager
                 selectedUnits[i].Find("Highlight").gameObject.SetActive(false);
             }
             selectedUnits.Clear();
+        }
+
+        private bool isWithinSelectionBounds(Transform tf)
+        {
+            if(!isDragging)
+            {
+                return false;
+            }
+
+            Camera cam = Camera.main;
+            
+            Bounds vpBounds = MultiSelect.GetVPBounds(cam,mousePos,Input.mousePosition);
+            
+            return vpBounds.Contains(cam.WorldToViewportPoint(tf.position));
+
         }
 
    }

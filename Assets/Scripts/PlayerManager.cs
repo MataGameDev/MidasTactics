@@ -9,6 +9,8 @@ namespace LP.FDG.Player
     {
         public static PlayerManager instance;
 
+        public Transform playerUnits;
+
         void Start()
         {
             instance = this;
