@@ -11,9 +11,13 @@ namespace LP.FDG.Player
 
         public Transform playerUnits;
 
+        public Transform enemyUnits;
+
         void Start()
         {
             instance = this;
+            Units.UnitHandler.instance.SetBasicUnitStats(playerUnits);
+            //Units.UnitHandler.instance.SetBasicUnitStats(enemyUnits);
         }
 
         void Update()

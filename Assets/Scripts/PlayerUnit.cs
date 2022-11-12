@@ -10,6 +10,8 @@ namespace LP.FDG.Units.Player
     public class PlayerUnit : MonoBehaviour
     {
         private NavMeshAgent navAgent;
+        
+        public int Cost,Attack,AtkRange,Health,Armor;
 
         private void OnEnable()
         {

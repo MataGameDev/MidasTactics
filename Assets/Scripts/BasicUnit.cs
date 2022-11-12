@@ -16,23 +16,24 @@ namespace LP.FDG.Units
             Healer
         };
 
+        [Space(10)]
+        [Header("Unit Settings")]
+        [Space(10)]
 
-        public bool IsPlayerUnit;
-        
         public UnitType type;
-
         public string unitName;
-
         public GameObject HumanPrefab;
         public GameObject InfectedPrefab;
 
+        [Space(10)]
+        [Header("Unit Base Stats")]
+        [Space(10)]
         public int Cost;
-
         public int Attack;
-
+        public int AtkRange;
         public int Health;
-
         public int Armor;
+
 
 
 

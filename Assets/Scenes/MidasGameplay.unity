@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 3803b5493580c64489046e828f75461c, type: 2}
 --- !u!1 &282532949
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +184,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff60ae3aa5946584db3f7a1914dc879b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  worker: {fileID: 11400000, guid: 511300edd38b3784a907cea6d39fb1f5, type: 2}
+  warrior: {fileID: 11400000, guid: 6d5cc56f11a6db54882f87d727fc2359, type: 2}
+  healer: {fileID: 11400000, guid: 66ed02fa54a0e5944be9add72eed3f42, type: 2}
 --- !u!4 &459704281
 Transform:
   m_ObjectHideFlags: 0
@@ -789,6 +792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerUnits: {fileID: 1416657640}
+  enemyUnits: {fileID: 1715141079}
 --- !u!1 &1330867819
 GameObject:
   m_ObjectHideFlags: 0
@@ -806,7 +810,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &1330867820
 MeshCollider:
