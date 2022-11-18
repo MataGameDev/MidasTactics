@@ -16,8 +16,11 @@ MonoBehaviour:
   unitName: 
   HumanPrefab: {fileID: 3671490713033198352, guid: 3d806213e463ac54aabd659bb1911d33, type: 3}
   InfectedPrefab: {fileID: 160361959188475809, guid: 7ef684f8c3b4a2f4a941de1607aaca54, type: 3}
-  Cost: 100
-  Attack: 50
-  atkRange: 1
-  Health: 100
-  Armor: 2
+  baseStats:
+    cost: 100
+    aggroRange: 10
+    atkRange: 1
+    atkSpeed: 0.5
+    attack: 50
+    health: 100
+    armor: 5

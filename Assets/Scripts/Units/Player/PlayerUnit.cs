@@ -1,8 +1,9 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-
+using UnityEngine.UI;
 
 namespace LP.FDG.Units.Player
 {
@@ -10,8 +11,8 @@ namespace LP.FDG.Units.Player
     public class PlayerUnit : MonoBehaviour
     {
         private NavMeshAgent navAgent;
-        
-        public int Cost,Attack,AtkRange,Health,Armor;
+
+        public UnitStatTypes.Base baseStats;
 
         private void OnEnable()
         {
@@ -22,7 +23,5 @@ namespace LP.FDG.Units.Player
         {
             navAgent.SetDestination(_destination);
         }
-
-
     }
 }
