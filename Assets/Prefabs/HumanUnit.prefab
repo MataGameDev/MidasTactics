@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6984857629335296769}
   - component: {fileID: 4127421910951234408}
-  m_Layer: 8
+  m_Layer: 10
   m_Name: Highlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,8 @@ GameObject:
   - component: {fileID: 1306027754808145577}
   - component: {fileID: 3076774833306828853}
   - component: {fileID: 1204959138220469438}
-  m_Layer: 8
+  - component: {fileID: 4270645582189142568}
+  m_Layer: 10
   m_Name: HumanUnit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,6 +228,20 @@ MonoBehaviour:
     attack: 0
     health: 0
     armor: 0
+--- !u!114 &4270645582189142568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3671490713033198352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83f609f1cd7a60441984914fc6b8b21e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isInteracting: 0
+  highlight: {fileID: 554693003886077731}
 --- !u!1001 &3984324840265170817
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -240,7 +255,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 418276710100176504, guid: 7f48187a8f6ce864f9d70ad0a6f3912b, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 418276710100176506, guid: 7f48187a8f6ce864f9d70ad0a6f3912b, type: 3}
       propertyPath: m_PresetInfoIsWorld
@@ -332,11 +347,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6385884431361409131, guid: 7f48187a8f6ce864f9d70ad0a6f3912b, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7073819176139996355, guid: 7f48187a8f6ce864f9d70ad0a6f3912b, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f48187a8f6ce864f9d70ad0a6f3912b, type: 3}
