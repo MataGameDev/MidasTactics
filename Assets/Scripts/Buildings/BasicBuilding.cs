@@ -5,7 +5,7 @@ namespace LP.FDG.Buildings
     [CreateAssetMenu(fileName = "Building", menuName = "New Building/Basic")]
     public class BasicBuilding : ScriptableObject
     {
-        public enum BuildingType
+        public enum buildingType
         {
             Barracks
         }
@@ -13,7 +13,7 @@ namespace LP.FDG.Buildings
         [Space(15)]
         [Header("Building Settings")]
 
-        public BuildingType type;
+        public buildingType type;
         public new string name;
         public GameObject buildingPrefab;
         public GameObject icon;
