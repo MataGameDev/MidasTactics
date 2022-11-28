@@ -13,12 +13,14 @@ MonoBehaviour:
   m_Name: Warrior
   m_EditorClassIdentifier: 
   type: 1
-  unitName: 
-  HumanPrefab: {fileID: 3671490713033198352, guid: 3d806213e463ac54aabd659bb1911d33, type: 3}
-  InfectedPrefab: {fileID: 160361959188475809, guid: 7ef684f8c3b4a2f4a941de1607aaca54, type: 3}
+  name: 
+  humanPrefab: {fileID: 0}
+  infectedPrefab: {fileID: 0}
+  icon: {fileID: 0}
+  spawnTime: 0
   baseStats:
     cost: 100
-    aggroRange: 10
+    aggroRange: 5
     atkRange: 1
     atkSpeed: 0.5
     attack: 50

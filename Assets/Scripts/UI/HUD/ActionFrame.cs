@@ -12,11 +12,11 @@ namespace LP.FDG.UI.HUD
         [SerializeField] private Button actionButton = null;
         [SerializeField] private Transform layoutGroup = null;
 
-        private List<Button> buttons = new List<Button>();
+        private List<Button> buttons = new();
         private PlayerActions actionsList = null;
 
-        public List<float> spawnQueue = new List<float>();
-        public List<GameObject> spawnOrder = new List<GameObject>();
+        public List<float> spawnQueue = new();
+        public List<GameObject> spawnOrder = new();
 
         public GameObject spawnPoint = null;
 
