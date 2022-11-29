@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 17314248}
   - component: {fileID: 17314247}
   - component: {fileID: 17314249}
+  - component: {fileID: 17314250}
   m_Layer: 5
   m_Name: ActionsFrame
   m_TagString: Untagged
@@ -218,6 +219,18 @@ MonoBehaviour:
   spawnQueue: []
   spawnOrder: []
   spawnPoint: {fileID: 0}
+--- !u!114 &17314250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 17314245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff9a6b5c8d7892d4394aa476a4a8b9ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &24572801
 GameObject:
   m_ObjectHideFlags: 0

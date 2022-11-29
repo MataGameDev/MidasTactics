@@ -13,21 +13,24 @@ namespace LP.FDG.UI.HUD
             instance = this;
         }
 
-        public IEnumerator SpawnQueueTimer()
+        public IEnumerator SpawnQueueTimer
         {
-            if (ActionFrame.instance.spawnQueue.Count > 0)
+            get
             {
-                Debug.Log($"Waiting for {ActionFrame.instance.spawnQueue[0]}");
-
-                yield return new WaitForSeconds(ActionFrame.instance.spawnQueue[0]);
-
-                ActionFrame.instance.SpawnObject();
-
-                ActionFrame.instance.spawnQueue.Remove(ActionFrame.instance.spawnQueue[0]);
-
                 if (ActionFrame.instance.spawnQueue.Count > 0)
                 {
-                    StartCoroutine(SpawnQueueTimer());
+                    Debug.Log( $"Waiting for {ActionFrame.instance.spawnQueue[0]}");
+
+                    yield return new WaitForSeconds(ActionFrame.instance.spawnQueue[0]);
+
+                    ActionFrame.instance.SpawnObject();
+
+                    ActionFrame.instance.spawnQueue.Remove(ActionFrame.instance.spawnQueue[0]);
+
+                    if (ActionFrame.instance.spawnQueue.Count > 0)
+                    {
+                        StartCoroutine(SpawnQueueTimer);
+                    }
                 }
             }
         }

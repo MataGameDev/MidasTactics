@@ -14,31 +14,18 @@ namespace LP.FDG.Units
 
         private bool isPlayerUnit = false;
 
-        private void Start()
+        public void SetStatDisplayBasicUnit(UnitStatTypes.Base stats, bool isPlayer)
         {
-            try
-            {
-                maxHealth = gameObject.GetComponentInParent<Player.PlayerUnit>().baseStats.health;
-                armor = gameObject.GetComponentInParent<Player.PlayerUnit>().baseStats.armor;
-                isPlayerUnit = true;
-            }
-            catch (Exception)
-            {
-                Debug.Log("No player Unit. Trying Enemy Unit...");
-                try
-                {
-                    maxHealth = gameObject.GetComponentInParent<Enemy.EnemyUnit>().baseStats.health;
-                    armor = gameObject.GetComponentInParent<Enemy.EnemyUnit>().baseStats.armor;
-                    isPlayerUnit = false;
-                }
-                catch (Exception)
-                {
-                    Debug.Log("No Unit Scripts found!");
-                }
-            }
+            maxHealth = stats.health;
+            armor = stats.armor;
+            isPlayerUnit = isPlayer;
 
             currentHealth = maxHealth;
+
+
         }
+
+        public void SetStatDisplayBasicBuilding(Buildings.BuildingStatTypes)
 
         private void Update()
         {

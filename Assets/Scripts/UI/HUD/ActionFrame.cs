@@ -12,7 +12,7 @@ namespace LP.FDG.UI.HUD
         [SerializeField] private Button actionButton = null;
         [SerializeField] private Transform layoutGroup = null;
 
-        private List<Button> buttons = new List<Button>();
+        private List<Button> buttons = new();
         private PlayerActions actionsList = null;
 
         public List<float> spawnQueue = new();
@@ -85,7 +85,7 @@ namespace LP.FDG.UI.HUD
 
             if (spawnQueue.Count == 1)
             {
-                ActionTimer.instance.StartCoroutine(ActionTimer.instance.SpawnQueueTimer());
+                ActionTimer.instance.StartCoroutine(ActionTimer.instance.SpawnQueueTimer);
             }
             else if (spawnQueue.Count == 0)
             {
@@ -125,10 +125,12 @@ namespace LP.FDG.UI.HUD
 
         public void SpawnObject()
         {
-            GameObject spawnedObject = Instantiate(spawnOrder[0], new Vector3(spawnPoint.transform.position.x - 4,
-                spawnPoint.transform.position.y, spawnPoint.transform.position.z), Quaternion.identity);
+            GameObject spawnedObject = Instantiate(spawnOrder[0], new Vector3(spawnPoint.transform.parent.position.x - 4,
+                spawnPoint.transform.parent.position.y, spawnPoint.transform.parent.position.z), Quaternion.identity);
 
             spawnedObject.GetComponent<Units.Player.PlayerUnit>().baseStats.health = 50;
+
+            spawnedObject.GetComponent<Units.Player.PlayerUnit>().MoveUnit(spawnPoint.transform.position);
 
         }
     }
