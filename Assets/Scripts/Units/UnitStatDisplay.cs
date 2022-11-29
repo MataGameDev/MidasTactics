@@ -14,18 +14,18 @@ namespace LP.FDG.Units
 
         private bool isPlayerUnit = false;
 
-        public void SetStatDisplayBasicUnit(UnitStatTypes.Base stats, bool isPlayer)
-        {
-            maxHealth = stats.health;
-            armor = stats.armor;
-            isPlayerUnit = isPlayer;
+        //public void SetStatDisplayBasicUnit(UnitStatTypes.Base stats, bool isPlayer)
+        //{
+            //maxHealth = stats.health;
+            //armor = stats.armor;
+            //isPlayerUnit = isPlayer;
 
-            currentHealth = maxHealth;
+            //currentHealth = maxHealth;
 
 
-        }
+        //}
 
-        public void SetStatDisplayBasicBuilding(Buildings.BuildingStatTypes)
+        //public void SetStatDisplayBasicBuilding(Buildings.BuildingStatTypes)
 
         private void Update()
         {
