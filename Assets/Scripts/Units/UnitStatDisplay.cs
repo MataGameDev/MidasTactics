@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using LP.FDG.Buildings;
 
 namespace LP.FDG.Units
 {
@@ -25,7 +26,14 @@ namespace LP.FDG.Units
 
         }
 
-        public void SetStatDisplayBasicBuilding(Buildings.BuildingStatTypes)
+        public void SetStatDisplayBasicBuilding(BuildingStatTypes.Base stats , bool isPlayer)
+        {
+            maxHealth = stats.health;
+            armor = stats.armor;
+            isPlayerUnit = isPlayer;
+
+            currentHealth = maxHealth;
+        }
 
         private void Update()
         {
@@ -64,5 +72,7 @@ namespace LP.FDG.Units
                 Destroy(gameObject.transform.parent.gameObject);
             }
         }
+
+        
     }
 }

@@ -19,6 +19,7 @@ namespace LP.FDG.UI.HUD
         public List<GameObject> spawnOrder = new();
 
         public GameObject spawnPoint = null;
+        
 
         private void Awake()
         {
@@ -128,9 +129,17 @@ namespace LP.FDG.UI.HUD
             GameObject spawnedObject = Instantiate(spawnOrder[0], new Vector3(spawnPoint.transform.parent.position.x - 4,
                 spawnPoint.transform.parent.position.y, spawnPoint.transform.parent.position.z), Quaternion.identity);
 
-            spawnedObject.GetComponent<Units.Player.PlayerUnit>().baseStats.health = 50;
+            Units.Player.PlayerUnit pu = spawnedObject.GetComponent<Units.Player.PlayerUnit>();
+            pu.transform.SetParent(GameObject.Find("Player " + pu.unitType.type.ToString() + "s").transform);
+
+
 
             spawnedObject.GetComponent<Units.Player.PlayerUnit>().MoveUnit(spawnPoint.transform.position);
+
+
+
+            spawnQueue.Remove(spawnQueue[0]);
+            spawnOrder.Remove(spawnOrder[0]);
 
         }
     }

@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
@@ -12,16 +9,34 @@ namespace LP.FDG.Units.Player
     {
         private NavMeshAgent navAgent;
 
+        public BasicUnit unitType;
+
+
+        [HideInInspector]
         public UnitStatTypes.Base baseStats;
 
-        private void OnEnable()
+        public UnitStatDisplay statDisplay;
+
+        
+
+        private void Start()
         {
+            baseStats = unitType.baseStats;
+            statDisplay.SetStatDisplayBasicUnit(baseStats, true);
             navAgent = GetComponent<NavMeshAgent>();
         }
 
-        public void MoveUnit(Vector3 _destination)
+        public void MoveUnit(Vector3 destination)
         {
-            navAgent.SetDestination(_destination);
+            if(navAgent == null)
+            {
+                navAgent = GetComponent<NavMeshAgent>();
+                navAgent.SetDestination(destination);
+            }
+            else
+            {
+                navAgent.SetDestination(destination);
+            }
         }
     }
 }
