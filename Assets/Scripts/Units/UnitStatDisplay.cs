@@ -15,17 +15,18 @@ namespace LP.FDG.Units
 
         private bool isPlayerUnit = false;
 
-        public void SetStatDisplayBasicUnit(UnitStatTypes.Base stats, bool isPlayer)
-        {
-            maxHealth = stats.health;
-            armor = stats.armor;
-            isPlayerUnit = isPlayer;
+        //public void SetStatDisplayBasicUnit(UnitStatTypes.Base stats, bool isPlayer)
+        //{
+            //maxHealth = stats.health;
+            //armor = stats.armor;
+            //isPlayerUnit = isPlayer;
 
-            currentHealth = maxHealth;
+            //currentHealth = maxHealth;
 
 
-        }
+        //}
 
+<<<<<<< HEAD
         public void SetStatDisplayBasicBuilding(BuildingStatTypes.Base stats , bool isPlayer)
         {
             maxHealth = stats.health;
@@ -34,6 +35,9 @@ namespace LP.FDG.Units
 
             currentHealth = maxHealth;
         }
+=======
+        //public void SetStatDisplayBasicBuilding(Buildings.BuildingStatTypes)
+>>>>>>> 49f670bb93198b8eeb916bfb0f9aeb0a7f55b40f
 
         private void Update()
         {
