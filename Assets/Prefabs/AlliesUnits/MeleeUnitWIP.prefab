@@ -1,5 +1,102 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1720306044
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1720306045}
+  - component: {fileID: 1720306048}
+  - component: {fileID: 1720306047}
+  - component: {fileID: 1720306046}
+  m_Layer: 0
+  m_Name: 3dModelPlayer
+  m_TagString: Unit
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1720306045
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720306044}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4400514910991083429}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!33 &1720306048
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720306044}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1720306047
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720306044}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1720306046
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720306044}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &665149969029394096
 GameObject:
   m_ObjectHideFlags: 0
@@ -89,7 +186,7 @@ GameObject:
   - component: {fileID: 7155890905463572153}
   m_Layer: 0
   m_Name: 2dModelPlayer
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -681,7 +778,7 @@ GameObject:
   - component: {fileID: 456941733997785499}
   m_Layer: 0
   m_Name: MeleeUnitWIP
-  m_TagString: Untagged
+  m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -700,6 +797,7 @@ Transform:
   m_Children:
   - {fileID: 5945940534158011211}
   - {fileID: 4739033316893564619}
+  - {fileID: 1720306045}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -722,25 +820,25 @@ MonoBehaviour:
   visualMovementSpeed: 0.15
   animator: {fileID: 0}
   tileBeingOccupied: {fileID: 0}
-  damagedParticle: {fileID: 0}
-  unitName: Plants
+  damagedParticle: {fileID: 5949218295548989292, guid: 027598604a853db4d994150fa8147be5, type: 3}
+  unitName: MeleeUnitWIP
   moveSpeed: 5
   attackRange: 1
   attackDamage: 3
   maxHealthPoints: 5
   currentHealthPoints: 0
   unitSprite: {fileID: 21300000, guid: fd31c27505791194ebff629873cb7ce4, type: 3}
-  healthBarCanvas: {fileID: 0}
-  hitPointsText: {fileID: 0}
-  healthBar: {fileID: 0}
-  damagePopupCanvas: {fileID: 0}
-  damagePopupText: {fileID: 0}
-  damageBackdrop: {fileID: 0}
+  healthBarCanvas: {fileID: 5315677392812595383}
+  hitPointsText: {fileID: 2465496411847548553}
+  healthBar: {fileID: 7466935595032055036}
+  damagePopupCanvas: {fileID: 6558241628207440116}
+  damagePopupText: {fileID: 5306316836448699923}
+  damageBackdrop: {fileID: 2765295404033337639}
   map: {fileID: 0}
   startPoint: {fileID: 0}
   endPoint: {fileID: 0}
   moveSpeedTime: 1
-  holder2D: {fileID: 0}
+  holder2D: {fileID: 797668139874780884}
   unitInMovement: 0
   unitMoveState: 0
   completedMovement: 0

@@ -94,16 +94,18 @@ public class GameManager : MonoBehaviour
             //Update cursorLocation and unit appearing in the topLeft
             cursorUIUpdate();
             unitUIUpdate();
+            Debug.Log(TMS.selectedUnit);
+
+
             //If the unit is selected we want to highlight the current path with the UI
             if (TMS.selectedUnit != null && TMS.selectedUnit.GetComponent<Units>().getMovementStateEnum(1) == TMS.selectedUnit.GetComponent<Units>().unitMoveState)
             {
+            
                 //Check to see if the cursor is in range, we cant show movement outside of range so there is no point if its outside
                 if (TMS.selectedUnitMoveRange.Contains(TMS.graph[cursorX, cursorY]))
                 {
-                    //Generate new path to cursor try to limit this to once per new cursor location or else its too many calculations
-                    
 
-                    
+                    //Generate new path to cursor try to limit this to once per new cursor location or else its too many calculations
                     if (cursorX != TMS.selectedUnit.GetComponent<Units>().x || cursorY != TMS.selectedUnit.GetComponent<Units>().y)
                     {
                         if (!unitPathExists&&TMS.selectedUnit.GetComponent<Units>().movementQueue.Count==0)

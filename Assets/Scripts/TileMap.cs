@@ -85,7 +85,7 @@ public class TileMap : MonoBehaviour
     {
         //Get the battlemanager running
         //BMS = GetComponent<BattleManager>();
-        //GMS = GetComponent<GameManager>();
+        //GMS = GetComponent<gameManager>();
         //Generate the map info that will be used
         generateMapInfo();
         //Generate pathfinding graph
