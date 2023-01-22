@@ -4590,6 +4590,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1989635352497702970, guid: 191bd459b849b8a469547110488f2054, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1989635352497702970, guid: 191bd459b849b8a469547110488f2054, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 111b54cf946d9d7489476c3182b7c0b2, type: 3}
     - target: {fileID: 7890969731410321324, guid: 191bd459b849b8a469547110488f2054, type: 3}
       propertyPath: m_Name
       value: MidasMeleeUnitWIP

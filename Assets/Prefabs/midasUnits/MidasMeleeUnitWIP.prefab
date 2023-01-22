@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8374939557588203946}
   - component: {fileID: 2156005420068894061}
   - component: {fileID: 7150597780625814802}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: hpBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 1299710095397496553}
   - component: {fileID: 7876434163420302269}
   - component: {fileID: 6513107861774085601}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: healthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -380,7 +380,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d4cdb8e5017e3404685814fccb67fa54, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -401,6 +401,7 @@ GameObject:
   - component: {fileID: 8951109844088963030}
   - component: {fileID: 4742345405009213860}
   - component: {fileID: 6823520330311067556}
+  - component: {fileID: 6720437414477721755}
   m_Layer: 0
   m_Name: 2dModelPlayer
   m_TagString: Unit
@@ -489,6 +490,26 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 0.5, z: 0.5}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!95 &6720437414477721755
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3957878718354958281}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4466681649526728801
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +618,7 @@ GameObject:
   - component: {fileID: 8957818412600159761}
   - component: {fileID: 3119178649245554935}
   - component: {fileID: 2291176243194658708}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: hpValue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -912,7 +933,7 @@ GameObject:
   - component: {fileID: 2936620803867846237}
   - component: {fileID: 7304664285455866815}
   - component: {fileID: 1806198167338642085}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: backdrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -969,7 +990,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: d4cdb8e5017e3404685814fccb67fa54, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
