@@ -249,7 +249,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd31c27505791194ebff629873cb7ce4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7d159718bc890746ae21554985fe7c4, type: 3}
   m_Color: {r: 0.8773585, g: 0.87322, b: 0.87322, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -798,7 +798,7 @@ GameObject:
   - component: {fileID: 4400514910991083429}
   - component: {fileID: 456941733997785499}
   m_Layer: 0
-  m_Name: MeleeUnitWIP
+  m_Name: GeneralAlliesUnit
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -844,11 +844,11 @@ MonoBehaviour:
   damagedParticle: {fileID: 5949218295548989292, guid: 027598604a853db4d994150fa8147be5, type: 3}
   unitName: MeleeUnitWIP
   moveSpeed: 5
-  attackRange: 1
-  attackDamage: 3
-  maxHealthPoints: 5
+  attackRange: 3
+  attackDamage: 5
+  maxHealthPoints: 20
   currentHealthPoints: 0
-  unitSprite: {fileID: 21300000, guid: fd31c27505791194ebff629873cb7ce4, type: 3}
+  unitSprite: {fileID: 21300000, guid: f7d159718bc890746ae21554985fe7c4, type: 3}
   healthBarCanvas: {fileID: 5315677392812595383}
   hitPointsText: {fileID: 2465496411847548553}
   healthBar: {fileID: 7466935595032055036}

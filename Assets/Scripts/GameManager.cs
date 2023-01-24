@@ -84,7 +84,7 @@ public class GameManager : MonoBehaviour
 
         
     }
-    //2019/10/17 there is a small blink between disable and re-enable for path, its a bit jarring, try to fix it later
+
     public void Update()
     {
         //Always trying to see where the mouse is pointing
@@ -94,7 +94,7 @@ public class GameManager : MonoBehaviour
             //Update cursorLocation and unit appearing in the topLeft
             cursorUIUpdate();
             unitUIUpdate();
-            Debug.Log(TMS.selectedUnit);
+
 
 
             //If the unit is selected we want to highlight the current path with the UI
@@ -702,7 +702,6 @@ public class GameManager : MonoBehaviour
             quadToUpdate.GetComponent<Renderer>().enabled = true;
         }
     }
-
     //In: two nodes that are being checked and int i is the position in the path ie i=0 is the first thing in the list
     //Out: void
     //Desc: orients the quad for the final node in list to display proper information
@@ -746,7 +745,6 @@ public class GameManager : MonoBehaviour
             quadToUpdate.GetComponent<Renderer>().enabled = true;
         }
     }
-
     //In: two units that last fought
     //Out: void
     //Desc: waits until all the animations and stuff are finished before calling the game
@@ -778,12 +776,9 @@ public class GameManager : MonoBehaviour
 
 
     }
-
-
     //In: 
     //Out: void
     //Desc: set the player winning
-    
     public void win()
     {
         displayWinnerUI.enabled = true;

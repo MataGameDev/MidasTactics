@@ -466,7 +466,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd31c27505791194ebff629873cb7ce4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ab2bac5cb8ddaa64eaec4942750ab72d, type: 3}
   m_Color: {r: 0.8773585, g: 0.87322, b: 0.87322, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -755,7 +755,7 @@ GameObject:
   - component: {fileID: 66731234103707320}
   - component: {fileID: 4299729680757362822}
   m_Layer: 0
-  m_Name: MidasMeleeUnitWIP
+  m_Name: MidasUnit
   m_TagString: Unit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -801,11 +801,11 @@ MonoBehaviour:
   damagedParticle: {fileID: 5949218295548989292, guid: 027598604a853db4d994150fa8147be5, type: 3}
   unitName: MidasMeleeUnitWIP
   moveSpeed: 5
-  attackRange: 1
-  attackDamage: 3
-  maxHealthPoints: 5
+  attackRange: 3
+  attackDamage: 5
+  maxHealthPoints: 20
   currentHealthPoints: 0
-  unitSprite: {fileID: 21300000, guid: fd31c27505791194ebff629873cb7ce4, type: 3}
+  unitSprite: {fileID: 21300000, guid: ab2bac5cb8ddaa64eaec4942750ab72d, type: 3}
   healthBarCanvas: {fileID: 8374939557588203946}
   hitPointsText: {fileID: 2291176243194658708}
   healthBar: {fileID: 6513107861774085601}
