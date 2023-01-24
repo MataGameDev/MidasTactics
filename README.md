@@ -1,2 +1,3 @@
 # MidasTactics
-A Basic RTS Game
+A Basic RT/
+TBS Game 
